@@ -1,0 +1,9 @@
+@import 'geral.css';
+@import 'header.css';
+@import 'footer.css';
+
+/* home */
+@import 'home/animais.css';
+@import 'home/faq.css';
+@import 'home/numeros.css';
+@import 'home/contato.css';

@@ -1,0 +1,32 @@
+.header-bg {
+  grid-column: 3/5;
+  background-color: #fb5;
+  margin-top: 2rem;
+  padding: 1.2rem 0.8rem;
+}
+
+.header-menu {
+  display: flex;
+  font-family: monospace;
+  font-weight: bold;
+  font-size: 1.6rem;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  flex-wrap: wrap;
+}
+
+.header-menu a {
+  padding: 0.8rem 1.6rem;
+  display: block;
+}
+
+.menu-mobile {
+  display: none;
+}
+
+@media (max-width:800px) {
+  .header-bg {
+    grid-column: 1;
+    margin-top: 0;
+  }
+}
