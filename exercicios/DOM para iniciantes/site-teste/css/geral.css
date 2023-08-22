@@ -9,6 +9,9 @@
 html {
   font-size: 62.5%;
 }
+html.aumentarTexto {
+  font-size: 80%;
+}
 
 body {
   background-color: #FAF6ED;
