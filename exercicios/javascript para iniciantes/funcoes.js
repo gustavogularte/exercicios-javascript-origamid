@@ -40,8 +40,8 @@ function mostrarNome() {
 window.document.addEventListener('scroll', mostrarNome);
 
 // Corrija o erro abaixo
-let totalPaises = 193;
 function precisoVisitar(paisesVisitados) {
+  var totalPaises = 193;
   return `Ainda faltam ${totalPaises - paisesVisitados} países para visitar`;
 }
 function jaVisitei(paisesVisitados) {
@@ -49,3 +49,4 @@ function jaVisitei(paisesVisitados) {
 }
 precisoVisitar(20);
 jaVisitei(20);
+//resposta: tirando var totalPaises para fora da função

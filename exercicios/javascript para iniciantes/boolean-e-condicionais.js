@@ -38,7 +38,7 @@ if(('Gato' === 'gato') && (5 > 2)) {
 } else {
   console.log('Falso');
 }
-//falso
+//resposta: falso
 
 // O que irá aparecer no console?
 if(('Gato' === 'gato') || (5 > 2)) {
@@ -46,4 +46,4 @@ if(('Gato' === 'gato') || (5 > 2)) {
 } else {
   console.log('Falso');
 }
-//Cão
+//resposta: Cão

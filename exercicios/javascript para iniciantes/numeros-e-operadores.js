@@ -1,6 +1,6 @@
 // Qual o resultado da seguinte expressão?
 var total = 10 + 5 * 2 / 2 + 20;
-// o resultado é 35
+//resposta: 35
 
 // Crie duas expressões que retornem NaN
 let nam1 = 19 - '20 unidades';
@@ -19,4 +19,3 @@ var numero = +'80' / 2; //fazendo a divisão antes de concatenar
 var unidade = 'kg';
 var peso = numero + unidade; // '80kg'
 var pesoPorDois = peso; // NaN (Not a Number)
-console.log(pesoPorDois)
