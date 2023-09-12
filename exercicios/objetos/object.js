@@ -13,7 +13,7 @@ Object.defineProperties(quadrado, {
     value: 4,
     enumerable: true,
   }
-})aaaaaaaaaaaaaaaaaaaaaaaaa
+})
 
 // Previna qualquer mudança
 // no objeto abaixo
