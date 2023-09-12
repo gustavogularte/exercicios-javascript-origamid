@@ -1,8 +1,7 @@
 // Retorne a soma total de caracteres dos
 // parágrafos acima utilizando reduce
 const paragrafos = document.querySelectorAll('p');
-const paragrafosArray = Array.from(paragrafos);
-const caracteres = paragrafosArray.reduce((acc, item) => {
+const caracteres = Array.prototype.reduce.call(paragrafos, (acc, item) => {
   return acc + item.innerText.length
 }, 0)
 console.log(caracteres)
