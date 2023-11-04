@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Button Creator</title>
+  <style>
+    label {
+      display: block;
+    }
+    input, select {
+      display: block;
+      margin-bottom: 20px;
+      margin-top: 4px;
+    }
+    main {
+      display: grid;
+      grid-template-columns: 300px 1fr;
+    }
+
+    span {
+      display: block;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <form id="controles">
+      <label for="texto">texto</label>
+      <input type="text" name="texto" id="texto">
+      <label for="color">color</label>
+      <input type="color" name="color" id="color">
+      <label for="backgroundColor">background-color</label>
+      <input type="color" name="backgroundColor" id="backgroundColor">
+      <label for="height">height</label>
+      <input type="range" name="height" id="height" min="1" max="200">
+      <label for="width">width</label>
+      <input type="range" name="width" id="width" min="1" max="600">
+      <label for="border">border</label>
+      <input type="text" name="border" id="border">
+      <label for="borderRadius">border-radius</label>
+      <input type="range" name="borderRadius" id="borderRadius">
+      <select name="fontFamily" id="fontFamily">
+        <option value="Arial">Arial</option>
+        <option value="Georgia">Georgia</option>
+        <option value="monospace">Monospace</option>
+      </select>
+      <label for="fontSize">font-size</label>
+      <input type="text" name="fontSize" id="fontSize">
+    </form>
+    <section class="resultado">
+      <button class="btn">Clique</button>
+      <pre>
+        <code class="css">
+        </code>
+      </pre>
+    </section>
+  </main>
+
+  <script src="button-creator.js"></script>
+</body>
+</html>
