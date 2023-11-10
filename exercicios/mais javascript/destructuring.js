@@ -6,8 +6,7 @@ const { backgroundColor, color, margin } = btnStyles;
 // Troque os valores das variáveis abaixo
 let cursoAtivo = 'JavaScript';
 let cursoInativo = 'HTML';
-cursoAtivo = 'teste';
-cursoInativo = 'teste 2';
+[cursoAtivo, cursoInativo] = [cursoInativo, cursoAtivo];
 
 // Corrija o erro abaixo
 const cachorro = {
