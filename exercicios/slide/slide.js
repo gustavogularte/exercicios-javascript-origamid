@@ -7,12 +7,14 @@ class Slide {
 
   onStart(e, clientX) {
     e.preventDefault();
+    console.log(e)
     this.dist.começo = e.clientX;
     this.wrapper.addEventListener('mousemove', this.onMove);
   }
 
   onMove(e) {
     this.dist.movimento = -(this.dist.começo - e.clientX);
+    console.log(this.dist.movimento)
     const clientX = (this.dist.posicaoFinal + this.dist.movimento) * 1.5;
     this.slide.style.transform = `translate3d(${clientX}px, 0, 0)`;
   }
