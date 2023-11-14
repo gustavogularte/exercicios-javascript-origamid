@@ -1,5 +1,6 @@
 .animais-imagens {
   grid-column: 2/3;
+  transform: translate3d();
 }
 
 .animais-imagens-thumb {
