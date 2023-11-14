@@ -1,0 +1,10 @@
+.slide {
+  display: flex;
+  grid-column: 1/-1;
+  gap: 6rem;
+}
+
+.slide li {
+  width: 40vw;
+  flex-shrink: 0;
+}
