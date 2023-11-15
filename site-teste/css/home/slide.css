@@ -1,10 +1,10 @@
 .slide-wrapper {
   grid-column: 1/5;
   overflow: hidden;
+  padding: 0;
 }
 
 .slide {
-  grid-column: 3;
   display: flex;
   gap: 6rem;
 }
