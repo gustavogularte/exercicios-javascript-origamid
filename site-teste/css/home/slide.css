@@ -1,7 +1,10 @@
+.teste {
+  grid-column: 1/-1;
+}
+
 .slide-wrapper {
-  grid-column: 1/5;
+  grid-column: 1/-1;
   overflow: hidden;
-  padding: 0;
 }
 
 .slide {
@@ -24,4 +27,25 @@
 .slide li.ativo {
   transform: scale(1);
   opacity: 1;
+}
+
+[data-control="slide"] {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  margin: 2rem;
+}
+
+[data-control="slide"] a {
+  display: block;
+  width: 1.8rem;
+  height: 1.8rem;
+  background-color: #fb5;
+  border-radius: 50%;
+  text-indent: -666rem;
+}
+
+[data-control="slide"] a:hover,
+[data-control="slide"] li.ativo a{
+  background-color: #E54;
 }

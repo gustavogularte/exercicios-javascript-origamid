@@ -3,6 +3,7 @@ class Slide {
     this.wrapper = document.querySelector(wrapper);
     this.slide = document.querySelector(slide);
     this.dist = { posicaoFinal: 0, começo: 0, movimento: 0 };
+    this.changeEvent = new Event('changeEvent');
   }
 
   transition(active) {
@@ -85,11 +86,12 @@ class Slide {
     this.moveSlide(activeSlide.position);
     this.slideIndexNav(index);
     this.ativarSlide();
+    this.wrapper.dispatchEvent(this.changeEvent);
   }
 
   ativarSlide() {
     this.slideArray.forEach((item) => item.item.classList.remove('ativo'));
-    this.slideArray[this.index.active].item.classList.add('ativo')
+    this.slideArray[this.index.active].item.classList.add('ativo');
   }
 
   onResize() {
@@ -112,6 +114,8 @@ class Slide {
     this.onMove = this.onMove.bind(this);
     this.onEnd = this.onEnd.bind(this);
     this.onResize = this.onResize.bind(this);
+
+    this.activeControl = this.activeControl.bind(this);
   }
 
   init() {
@@ -126,5 +130,43 @@ class Slide {
   }
 }
 
-const slide = new Slide('.slide-wrapper', '.slide');
+class SlideControls extends Slide {
+  createControl() {
+    const control = document.createElement('ul');
+    control.dataset.control = 'slide';
+    this.slideArray.forEach((item, index) => {
+      control.innerHTML += `<li><a href="#slide${index + 1}">${
+        index + 1
+      }</a></li>`;
+    });
+    this.wrapper.appendChild(control);
+    return control;
+  }
+
+  addEventControl() {
+    this.arrayControl.forEach((item, index) => {
+      item.addEventListener('click', () => {
+        this.changeSlide(index);
+      });
+    });
+    this.wrapper.addEventListener('changeEvent', this.activeControl);
+  }
+
+  activeControl() {
+    this.arrayControl.forEach((item) => {
+      item.classList.remove('ativo');
+    });
+    this.arrayControl[this.index.active].classList.add('ativo');
+  }
+
+  addControl() {
+    this.control = this.createControl();
+    this.arrayControl = [...this.control.children];
+    this.activeControl();
+    this.addEventControl();
+  }
+}
+
+const slide = new SlideControls('.slide-wrapper', '.slide');
 slide.init();
+slide.addControl();
