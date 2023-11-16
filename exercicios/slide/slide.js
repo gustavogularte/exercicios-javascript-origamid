@@ -84,6 +84,19 @@ class Slide {
     this.dist.posicaoFinal = activeSlide.position;
     this.moveSlide(activeSlide.position);
     this.slideIndexNav(index);
+    this.ativarSlide();
+  }
+
+  ativarSlide() {
+    this.slideArray.forEach((item) => item.item.classList.remove('ativo'));
+    this.slideArray[this.index.active].item.classList.add('ativo')
+  }
+
+  onResize() {
+    setTimeout(() => {
+      this.slideConfig();
+      this.changeSlide(this.index.active);
+    }, 500);
   }
 
   addEvents() {
@@ -91,12 +104,14 @@ class Slide {
     this.wrapper.addEventListener('touchstart', this.onStart);
     this.wrapper.addEventListener('mouseup', this.onEnd);
     this.wrapper.addEventListener('touchend', this.onEnd);
+    addEventListener('resize', this.onResize);
   }
 
   addBind() {
     this.onStart = this.onStart.bind(this);
     this.onMove = this.onMove.bind(this);
     this.onEnd = this.onEnd.bind(this);
+    this.onResize = this.onResize.bind(this);
   }
 
   init() {

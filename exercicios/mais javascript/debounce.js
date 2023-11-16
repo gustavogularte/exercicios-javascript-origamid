@@ -1,4 +1,5 @@
 function debounce(callback, delay) {
+  console.log('debounce')
   let timer;
   return (...args) => {
     if (timer) clearTimeout(timer);
@@ -8,11 +9,3 @@ function debounce(callback, delay) {
     }, delay);
   };
 }
-
-function teste() {
-  console.log('teste');
-}
-
-const sla = debounce(teste, 50);
-
-addEventListener('scroll', sla);

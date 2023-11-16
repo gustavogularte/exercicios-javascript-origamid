@@ -9,7 +9,19 @@
   gap: 6rem;
 }
 
+.slide:hover {
+  will-change: transform;
+}
+
 .slide li {
   width: 40vw;
   flex-shrink: 0;
+  transform: scale(0.8);
+  opacity: .5;
+  transition: .3s;
+}
+
+.slide li.ativo {
+  transform: scale(1);
+  opacity: 1;
 }
