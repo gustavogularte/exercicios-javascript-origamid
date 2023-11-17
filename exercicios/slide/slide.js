@@ -159,8 +159,8 @@ class SlideControls extends Slide {
     this.arrayControl[this.index.active].classList.add('ativo');
   }
 
-  addControl() {
-    this.control = this.createControl();
+  addControl(customControl) {
+    this.control = document.querySelector(customControl) || this.createControl();
     this.arrayControl = [...this.control.children];
     this.activeControl();
     this.addEventControl();
@@ -169,4 +169,4 @@ class SlideControls extends Slide {
 
 const slide = new SlideControls('.slide-wrapper', '.slide');
 slide.init();
-slide.addControl();
+slide.addControl('.custom-control');

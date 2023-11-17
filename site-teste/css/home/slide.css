@@ -1,5 +1,6 @@
-.teste {
+.slide-container {
   grid-column: 1/-1;
+  gap: 2rem;
 }
 
 .slide-wrapper {
@@ -48,4 +49,26 @@
 [data-control="slide"] a:hover,
 [data-control="slide"] li.ativo a{
   background-color: #E54;
+}
+
+.custom-control {
+  display: flex;
+  justify-content: center;
+  grid-column: 1/-1;
+}
+
+.custom-control li {
+  opacity: .8;
+  transform: scale(.8);
+  width: 6rem;
+  height: 6rem;
+  border-radius: 50%;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.custom-control li.ativo {
+  opacity: 1;
+  transform: scale(1);
+  transition: .3s;
 }
